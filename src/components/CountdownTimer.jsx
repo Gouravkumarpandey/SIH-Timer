@@ -31,8 +31,13 @@ export default function CountdownTimer() {
   return (
     <div className="min-h-screen bg-hackathon-dark flex flex-col items-center justify-start p-4 pt-8">
       <div className="max-w-3xl w-full flex flex-col items-center">
-        <div className="animate-pulse-slow flex flex-col items-center">
-          <img src="/timer.jpg" alt="Hackathon Logo" className="h-80 md:h-96 object-contain mb-0" />
+        <div className="flex flex-col items-center">
+          <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
+            <img src="/AJU.jpg" alt="AJU Logo" className="h-24 md:h-32 object-contain" />
+            <img src="/Engg.jpg" alt="Engineering Logo" className="h-24 md:h-32 object-contain" />
+            <img src="/SIH.jpg" alt="SIH Logo" className="h-24 md:h-32 object-contain" />
+            <img src="/timer.jpg" alt="Timer Logo" className="h-24 md:h-32 object-contain" />
+          </div>
           <div className="-mt-4">
             <TypewriterText text="Where Innovation Meets Reality!" />
           </div>

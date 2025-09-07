@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
-import TypewriterText from "../components/TypewriterText";
 
 export default function CountdownTimer() {
   const [isRunning, setIsRunning] = useState(false);
@@ -30,32 +29,27 @@ export default function CountdownTimer() {
 
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
-      {/* Position timer in the center-bottom area where "2025" is */}
-      <div className="flex flex-col items-center justify-center mt-64 md:mt-80">
+      {/* Position timer in the center-bottom area where "2025" would be */}
+      <div className="flex flex-col items-center justify-center mt-40 md:mt-48 lg:mt-56">
         
-        {/* Timer positioned under the "2025" text */}
-        <div className="bg-black/70 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-2xl border border-white/20 mb-8">
-          <div className="text-4xl md:text-6xl font-bold text-white text-center font-mono tracking-wider mb-4">
+        {/* Timer positioned to align with poster layout */}
+        <div className="bg-black/80 backdrop-blur-md p-4 md:p-6 rounded-lg shadow-2xl border border-white/20 mb-4">
+          <div className="text-3xl md:text-4xl lg:text-5xl font-bold text-white text-center font-mono tracking-wider mb-3 py-2">
             {formatTime()}
           </div>
 
           {!isRunning ? (
             <Button
               onClick={() => setIsRunning(true)}
-              className="w-full py-4 text-base md:text-lg bg-gradient-to-r from-green-600 to-orange-500 hover:from-green-700 hover:to-orange-600 transition-all duration-300 animate-pulse"
+              className="w-full py-3 text-base md:text-lg bg-gradient-to-r from-green-500 to-orange-500 hover:from-green-600 hover:to-orange-600 transition-all duration-300 text-white rounded shadow-lg"
             >
-              <Play className="mr-2" /> Start Hackathon
+              <Play className="mr-2 h-4 w-4" /> Start Hackathon
             </Button>
           ) : (
             <p className="text-center text-white text-base md:text-lg font-semibold">
               Hackathon in Progress! 🚀
             </p>
           )}
-        </div>
-
-        {/* Motivational text */}
-        <div className="text-center text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
-          <TypewriterText text="6 hours to turn your ideas into reality!" />
         </div>
       </div>
     </div>

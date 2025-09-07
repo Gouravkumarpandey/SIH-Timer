@@ -2,12 +2,103 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    
+    <!-- Favicon -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AJU Smart India Internal Hackathon</title>
+    
+    <!-- Responsive Design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="AJU Smart India Internal Hackathon 2025 - Countdown Timer for the biggest hackathon event" />
+    <meta name="keywords" content="Smart India Hackathon, SIH 2025, AJU, Arka Jain University, Hackathon Timer" />
+    <meta name="author" content="Arka Jain University" />
+    
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="AJU Smart India Internal Hackathon 2025" />
+    <meta property="og:description" content="Countdown timer for Smart India Internal Hackathon 2025 at Arka Jain University" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sih-timer.vercel.app" />
+    <meta property="og:image" content="/sih-poster.jpg" />
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="AJU Smart India Internal Hackathon 2025" />
+    <meta name="twitter:description" content="Countdown timer for Smart India Internal Hackathon 2025" />
+    <meta name="twitter:image" content="/sih-poster.jpg" />
+    
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#307349" />
+    
+    <!-- Mobile Web App Capable -->
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="SIH Timer" />
+    
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="/sih-poster.jpg" as="image" />
+    
+    <!-- Prevent FOUC (Flash of Unstyled Content) -->
+    <style>
+      body {
+        margin: 0;
+        padding: 0;
+        font-family: system-ui, -apple-system, sans-serif;
+        background-color: #307349;
+        overflow-x: hidden;
+      }
+      
+      #root {
+        min-height: 100vh;
+        width: 100%;
+      }
+      
+      /* Loading state */
+      .loading {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #307349;
+        color: white;
+        font-size: 1.2rem;
+      }
+      
+      /* Responsive utilities */
+      @media (max-width: 640px) {
+        html {
+          font-size: 14px;
+        }
+      }
+      
+      @media (max-width: 480px) {
+        html {
+          font-size: 12px;
+        }
+      }
+    </style>
+    
+    <title>AJU Smart India Internal Hackathon 2025 - Timer</title>
   </head>
   <body>
+    <!-- Loading fallback -->
+    <div id="loading" class="loading">
+      <div>Loading SIH Timer...</div>
+    </div>
+    
     <div id="root"></div>
+    
     <script type="module" src="/src/main.jsx"></script>
+    
+    <!-- Remove loading state when app loads -->
+    <script>
+      window.addEventListener('load', function() {
+        const loading = document.getElementById('loading');
+        if (loading) {
+          loading.style.display = 'none';
+        }
+      });
+    </script>
   </body>
 </html>

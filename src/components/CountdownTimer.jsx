@@ -29,43 +29,33 @@ export default function CountdownTimer() {
   };
 
   return (
-    <div className="min-h-screen bg-hackathon-dark flex flex-col items-center justify-start p-4 pt-8">
-      <div className="max-w-3xl w-full flex flex-col items-center">
-        <div className="flex flex-col items-center">
-          <div className="flex flex-wrap justify-center items-center gap-4 mb-4">
-            <img src="/AJU.jpg" alt="AJU Logo" className="h-24 md:h-32 object-contain" />
-            <img src="/Engg.jpg" alt="Engineering Logo" className="h-24 md:h-32 object-contain" />
-            <img src="/SIH.jpg" alt="SIH Logo" className="h-24 md:h-32 object-contain" />
-            <img src="/timer.jpg" alt="Timer Logo" className="h-24 md:h-32 object-contain" />
-          </div>
-          <div className="-mt-4">
-            <TypewriterText text="Where Innovation Meets Reality!" />
-          </div>
-        </div>
-
-        <div className="mt-16 bg-gradient-to-br from-hackathon-purple/20 to-hackathon-blue/20 
-          backdrop-blur-sm p-8 rounded-xl shadow-xl border border-white/10 w-full max-w-md">
-          
-          <div className="text-6xl md:text-7xl font-bold text-white text-center font-mono tracking-wider mb-6">
+    <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
+      {/* Position timer in the center-bottom area where "2025" is */}
+      <div className="flex flex-col items-center justify-center mt-64 md:mt-80">
+        
+        {/* Timer positioned under the "2025" text */}
+        <div className="bg-black/70 backdrop-blur-md p-6 md:p-8 rounded-xl shadow-2xl border border-white/20 mb-8">
+          <div className="text-4xl md:text-6xl font-bold text-white text-center font-mono tracking-wider mb-4">
             {formatTime()}
           </div>
 
           {!isRunning ? (
             <Button
               onClick={() => setIsRunning(true)}
-              className="w-full py-6 text-lg bg-gradient-to-r from-hackathon-purple to-hackathon-blue hover:opacity-90 transition-all duration-300 animate-pulse-slow"
+              className="w-full py-4 text-base md:text-lg bg-gradient-to-r from-green-600 to-orange-500 hover:from-green-700 hover:to-orange-600 transition-all duration-300 animate-pulse"
             >
               <Play className="mr-2" /> Start Hackathon
             </Button>
           ) : (
-            <p className="text-center text-white/80 text-lg">
-              Your hackathon is underway! Good luck!
+            <p className="text-center text-white text-base md:text-lg font-semibold">
+              Hackathon in Progress! 🚀
             </p>
           )}
         </div>
 
-        <div className="mt-10 text-center text-white/60 max-w-lg">
-          <p className="text-lg">6 hours to turn your ideas into reality!</p>
+        {/* Motivational text */}
+        <div className="text-center text-white bg-black/50 px-4 py-2 rounded-lg backdrop-blur-sm">
+          <TypewriterText text="6 hours to turn your ideas into reality!" />
         </div>
       </div>
     </div>

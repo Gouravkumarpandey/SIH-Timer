@@ -21,3 +21,14 @@ body {
 #root {
   min-height: 100vh;
 }
+
+/* Custom utilities for text shadows */
+@layer utilities {
+  .text-shadow-lg {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8), 0px 0px 8px rgba(0, 0, 0, 0.5);
+  }
+  
+  .text-shadow-xl {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.9), 0px 0px 12px rgba(0, 0, 0, 0.7);
+  }
+}

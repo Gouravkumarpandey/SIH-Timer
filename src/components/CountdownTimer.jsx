@@ -30,7 +30,7 @@ export default function CountdownTimer() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center p-4 relative">
       {/* Position timer in the center-bottom area where "2025" would be */}
-      <div className="flex flex-col items-center justify-center mt-40 md:mt-48 lg:mt-56">
+      <div className="flex flex-col items-center justify-center mt-48 md:mt-56 lg:mt-64">
         
         {/* Timer positioned to align with poster layout */}
         <div className="bg-black/80 backdrop-blur-md p-4 md:p-6 rounded-lg shadow-2xl border border-white/20 mb-4">

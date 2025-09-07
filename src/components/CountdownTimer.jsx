@@ -32,7 +32,7 @@ export default function CountdownTimer() {
     <div className="min-h-screen bg-hackathon-dark flex flex-col items-center justify-start p-4 pt-8">
       <div className="max-w-3xl w-full flex flex-col items-center">
         <div className="animate-pulse-slow flex flex-col items-center">
-          <img src="/title.png" alt="Hackathon Logo" className="h-80 md:h-96 object-contain mb-0" />
+          <img src="/timer.jpg" alt="Hackathon Logo" className="h-80 md:h-96 object-contain mb-0" />
           <div className="-mt-4">
             <TypewriterText text="Where Innovation Meets Reality!" />
           </div>
